@@ -1,16 +1,16 @@
 {
   "expo": {
-    "name": "client",
-    "slug": "client",
+    "name": "Fatbacks Admin",
+    "slug": "fatbacksAdmin",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/images/icon.png",
-    "scheme": "myapp",
+    "icon": "./assets/images/plato-app-icon.png",
+    "scheme": "admin",
     "userInterfaceStyle": "automatic",
     "splash": {
-      "image": "./assets/images/splash.png",
+      "image": "./assets/images/plato-splash-app-screen.png",
       "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+      "backgroundColor": "#222222"
     },
     "updates": {
       "fallbackToCacheTimeout": 0
