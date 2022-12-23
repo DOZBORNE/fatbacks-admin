@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { Alert, Switch } from 'react-native';
+import apiUrl from '../constants/constants';
 
 export default function ToggleSwitch({
   modifier,
@@ -14,7 +15,7 @@ export default function ToggleSwitch({
   async function toggleModifier(modifierName: string) {
     setStatus('loading');
     return await fetch(
-      `http://localhost:3000/api/v1/catalog/update/${modifierName}/${!isEnabled}`,
+      `${apiUrl}/catalog/update/${modifierName}/${!isEnabled}`,
       { method: 'POST', headers: { 'Content-Type': 'application/json' } }
     );
   }

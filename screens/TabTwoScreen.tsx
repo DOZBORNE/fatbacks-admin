@@ -1,4 +1,4 @@
-import { StyleSheet } from 'react-native';
+import { Button, StyleSheet } from 'react-native';
 
 import EditScreenInfo from '../components/EditScreenInfo';
 import { Text, View } from '../components/Themed';
@@ -16,6 +16,10 @@ export default function TabTwoScreen() {
         Hey there champ! I bet you're wondering what's on this page aren't ya!
         Well... coming soon :p
       </Text>
+
+      <Button onPress={() => {}} title={'Authorize me?'}>
+        Authorize me?
+      </Button>
     </View>
   );
 }

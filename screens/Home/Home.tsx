@@ -12,16 +12,17 @@ import { RootTabScreenProps } from '../../types';
 import { useEffect, useState } from 'react';
 import { SIDES } from './Home.constants';
 import ToggleSwitch from '../../components/ToggleSwitch';
+import apiUrl from '../../constants/constants';
 
 export default function Home({ navigation }: RootTabScreenProps<'Home'>) {
   const [isEnabled, setIsEnabled] = useState(false);
   const [modifierStatus, setModifierStatus] = useState<any>({});
   const [error, setError] = useState<any>(null);
   const [refreshing, setRefreshing] = useState(false);
-  const [status, setStatus] = useState('idle');
+  const [status, setStatus] = useState('loading');
 
   function fetchData() {
-    fetch('http://localhost:3000/api/v1/catalog/status')
+    fetch(`${apiUrl}/catalog/status`)
       .then(async (res) => {
         const data = await res.json();
         setModifierStatus(data.data);
